@@ -1,0 +1,6 @@
+﻿  Graph.cpp
+C:\Users\soroe\RiderProjects\Rønsgård_Sondre_Compulsory3\Graph.cpp(77,44): warning C4267: 'return': conversion from 'size_t' to 'int', possible loss of data
+  Rønsgård_Sondre_Compulsory3.cpp
+  Generating Code...
+C:\Users\soroe\RiderProjects\Rønsgård_Sondre_Compulsory3\Graph.cpp(90): warning C4172: returning address of local variable or temporary: ListOfEndNodes
+  Rønsgård_Sondre_Compulsory3.vcxproj -> C:\Users\soroe\RiderProjects\Rønsgård_Sondre_Compulsory3\x64\Debug\Rønsgård_Sondre_Compulsory3.exe
