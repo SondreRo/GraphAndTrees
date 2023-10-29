@@ -9,7 +9,6 @@ Graph::~Graph()
 {
 	for (int i{}; i < ListOfNodes.size(); i++)
 	{
-		std::cout << "Delete node" << std::endl;
 		ListOfNodes[i]->Destroy();
 	}
 }
@@ -80,6 +79,11 @@ int Graph::GetDegree(Node* inNode)
 int Graph::GetDegree(std::string inNodeS)
 {
 	return GetDegree(FindNodeFromName(inNodeS));
+}
+
+std::vector<Node*> Graph::GetAdjacent(Node* inNode)
+{
+	return inNode->ListOfAdjacentNodes;
 }
 
 Node** Graph::EndNodes(Edge* inEdge)
@@ -237,6 +241,18 @@ void Graph::TraverseGraphStart(Node* StartNode)
 void Graph::TraverseGraphStart(std::string StartNodeS)
 {
 	return TraverseGraphStart(FindNodeFromName(StartNodeS));
+}
+
+Node* Graph::InsertRandomNode(std::string inName, float inData, int maxCost)
+{
+	srand(time(nullptr));
+
+	int RandInt = rand() % Nodes().size();
+	int RandCost = rand() % maxCost;
+	Node* RandNode = InsertNode(inName, inData);
+	InsertEdge(RandNode, Nodes()[RandInt], RandCost);
+	
+	return RandNode;
 }
 
 

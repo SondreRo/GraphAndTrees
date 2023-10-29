@@ -69,6 +69,28 @@ int main(int argc, char* argv[])
 
 	std::cout << MyGraph->GetEdgeBetween("Gullkorn", "Festiviteten")->Cost;
 
+
+	std::vector<Node*> MyList = MyGraph->GetAdjacent(MyGraph->FindNodeFromName("Gullkorn"));
+
+	std::cout << "Getting Adjacent: " << std::endl;
+	for (int i{}; i < MyList.size(); i++)
+	{
+		std::cout << MyList[i]->Name << std::endl;
+	}
+	std::cout << "END Found Adjacent " << std::endl;
+	// --------       --------- //
+
+
+	MyGraph->InsertRandomNode("MyRandom", 2, 100);
+
+	std::vector<Node*> MyNewList = MyGraph->GetAdjacent(MyGraph->FindNodeFromName("MyRandom"));
+
+	std::cout << "Getting Adjacent: Rand" << std::endl;
+	for (int i{}; i < MyNewList.size(); i++)
+	{
+		std::cout << MyNewList[i]->Name << std::endl;
+	}
+	std::cout << "END Found Adjacent Rand" << std::endl;
 	// --------       --------- //
 
 	delete MyGraph;

@@ -107,6 +107,7 @@ public:
 	Edge* GetEdgeBetween(std::string inNode1s, std::string inNode2s);
 	int GetDegree(Node* inNode);
 	int GetDegree(std::string inNodeS);
+	std::vector<Node*> GetAdjacent(Node* inNode);
 	Node** EndNodes(Edge* inEdge);
 	Node* Opposite(Node* inNode, Edge* inEdge);
 	bool AreAdjacent(Node* inNode1, Node* inNode2);
@@ -124,4 +125,6 @@ public:
 	
 	void TraverseGraphStart(Node* StartNode);
 	void TraverseGraphStart(std::string StartNodeS);
+
+	Node* InsertRandomNode(std::string inName, float inData, int maxCost);
 };

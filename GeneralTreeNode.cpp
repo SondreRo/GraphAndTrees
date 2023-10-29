@@ -19,7 +19,6 @@ GeneralTreeNode::GeneralTreeNode(int inData, GeneralTreeNode* inParent)
 
 GeneralTreeNode::~GeneralTreeNode()
 {
-	std::cout << GetData() << " Getting Destroyed" << std::endl;
 	DeleteChildren();
 }
 
